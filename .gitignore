@@ -1,0 +1,8 @@
+Library
+Logs
+obj
+Build
+*csproj
+Build.7z
+.vs
+[Tt]emp
