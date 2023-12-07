@@ -1,0 +1,5 @@
+/Users/takashimamasahiro/Desktop/Unity/VRHachathon/.utmp/RelWithDebInfo/5hb5a4q3/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/takashimamasahiro/Desktop/Unity/VRHachathon/.utmp/RelWithDebInfo/5hb5a4q3/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/takashimamasahiro/Desktop/Unity/VRHachathon/.utmp/RelWithDebInfo/5hb5a4q3/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+/Users/takashimamasahiro/Desktop/Unity/VRHachathon/.utmp/RelWithDebInfo/5hb5a4q3/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+/Users/takashimamasahiro/Desktop/Unity/VRHachathon/.utmp/RelWithDebInfo/5hb5a4q3/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
