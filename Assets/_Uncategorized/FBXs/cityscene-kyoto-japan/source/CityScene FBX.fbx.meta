@@ -1,0 +1,602 @@
+fileFormatVersion: 2
+guid: 0bdf2faab45024fbfb6d1c0b7dcca3fb
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: prop_base_diffuse
+    second: {fileID: 2800000, guid: 9fe31ebf57d5c445baa977da67265fde, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: prop_bridge_tex
+    second: {fileID: 2800000, guid: 69a147d0694a4499a9f2a6fa90cee27a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: prop_lamp_diffuse
+    second: {fileID: 2800000, guid: fe40d0856a4984009934fcd62afff200, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: prop_shovel_diffuse
+    second: {fileID: 2800000, guid: 0b46dc51954df4ef08f94bdae9daf6f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Bench
+    second: {fileID: 2800000, guid: a8c84538e41334414a557cef1f4c1ac5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Boxes
+    second: {fileID: 2800000, guid: 4eb15c7c951384422921751cc9ba718f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Chair
+    second: {fileID: 2800000, guid: 39142a2b920fb4a17ba01536ce71a51b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_CityElements
+    second: {fileID: 2800000, guid: 6af69e17ba2cf4371b394aa2a3a81fe8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_CivHouse_LittleRoof
+    second: {fileID: 2800000, guid: 889d64c17f0264ea4a239a9f8547ef3a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_CivHouse_Plastic
+    second: {fileID: 2800000, guid: 1c1648bb9ca2a441f99f647e87540000, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_CivHouse_RoofUnder
+    second: {fileID: 2800000, guid: 637d7a01ef80d4c2f91bd073e4278bb6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_CivHouse_SupportBeams
+    second: {fileID: 2800000, guid: 0af38e98b90ef4e53b5feddb210bdc4f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_CivHouse_TopRoof
+    second: {fileID: 2800000, guid: ff4a9aeba73504d45bf3769599c401b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_CivHouse_Walls
+    second: {fileID: 2800000, guid: ee6e1f65a8b4b4dccbd267d6c6c630aa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_CivHouse_WindowRooms
+    second: {fileID: 2800000, guid: 0c17786da63eb49d4950885756f6a41a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_CivHouse_Wood
+    second: {fileID: 2800000, guid: f15042a01cf8441c99ac99263aae941a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_DinnerTable
+    second: {fileID: 2800000, guid: 6909a26b627924ac18d25fda2ae87a3a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_DrinkCan
+    second: {fileID: 2800000, guid: aaadc3321f1364e74a7b3e06c5874a89, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Floor
+    second: {fileID: 2800000, guid: c7ab30506567243b4993acfccb6c21de, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_FloorStains
+    second: {fileID: 2800000, guid: 8e06b1d5e870c4551982bc969e677514, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_FloorStains2
+    second: {fileID: 2800000, guid: 48df207dcf25649339d50e9c6e0a93b8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_FloorStains2_alpha
+    second: {fileID: 2800000, guid: 07a5b6590c1494568b064a03c701e670, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_FloorStains_alpha
+    second: {fileID: 2800000, guid: 288c16f8a713243e1a5fb052d607d6ab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_GarbageBags
+    second: {fileID: 2800000, guid: 72842a67176324391b6984e3a840aec3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_GarbageBin2_tex
+    second: {fileID: 2800000, guid: 2b1fd1471e90c4e23b90ce7a695a0e90, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_GarbageBin_Big
+    second: {fileID: 2800000, guid: 27600261337284e989ef0e4bf0942480, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_GarbageBin_tex
+    second: {fileID: 2800000, guid: 08fe4a857ec2f4f759eadcc5fc3c830b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_LongPlantPot
+    second: {fileID: 2800000, guid: 1bf9fd01d58504cd9920328a23fa40b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_LongPlantPot_alpha
+    second: {fileID: 2800000, guid: 006727d204e17484782a2a148249adbb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_MarketObjects
+    second: {fileID: 2800000, guid: 084c16be49dd143869c30c19cf6b023a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_MarketRoof
+    second: {fileID: 2800000, guid: f24b9c65864a044069c0fb81fef73eed, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_MarketStand
+    second: {fileID: 2800000, guid: e94a4d2f3a33a4a9c9205f9125780719, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_MetalDoor
+    second: {fileID: 2800000, guid: 9993d36c6de2446f4bcc76deb94897f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_MetalDoor_alpha
+    second: {fileID: 2800000, guid: a234bb41521e84ab6a44d86690cdf05f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_PatchedWall
+    second: {fileID: 2800000, guid: ca884f5710ddd4280872bc5cc65ca5af, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_PatchedWall2
+    second: {fileID: 2800000, guid: e93018d34915f41449cf89c636692821, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_PatchedWall2_alpha
+    second: {fileID: 2800000, guid: 18de074db0d3441d5b1235a5487afe44, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_PatchedWall3
+    second: {fileID: 2800000, guid: 140f1534c83a9443586fd23e3681bd7f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_PatchedWall3_alpha
+    second: {fileID: 2800000, guid: 252628a3f0f5e47ef8b7c90aa7fcefdb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_PatchedWall_alpha
+    second: {fileID: 2800000, guid: 451c9beb1fb374c74b2e9c965b9228f7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Plantpot
+    second: {fileID: 2800000, guid: 986374e6fbbc644baa9503e2c2340382, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Posters
+    second: {fileID: 2800000, guid: 6a7860561ddce4a6090c28be5537df0b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Road
+    second: {fileID: 2800000, guid: 636f183dfd1bb4b618509d8b2a21ab60, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_RoadSides
+    second: {fileID: 2800000, guid: f94c617749dee4472bc2a2fdb74ace5b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Sewer
+    second: {fileID: 2800000, guid: e0f30026ae1e34f95ad4c32d7b7b317d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_SewerDecal
+    second: {fileID: 2800000, guid: 3c941567e25ff46b8a06a7afc4b91663, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_SewerDecal_alpha
+    second: {fileID: 2800000, guid: 0e2e725f171724a14a3bebefabf998e9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Sewer_alpha
+    second: {fileID: 2800000, guid: 0961694a61b0a4f0c8fccdafafd0726c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_SmallPost
+    second: {fileID: 2800000, guid: 2237c5728859a45579a2e079f6083fa0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Stairs
+    second: {fileID: 2800000, guid: f1b6945877d9745e5995855947e4f624, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_StoreObjects
+    second: {fileID: 2800000, guid: 1b94aae3221af47539c2ef115d8371e9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Table
+    second: {fileID: 2800000, guid: 502e50b1e28d942b7a5012b849f0d2d3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_TornPosters
+    second: {fileID: 2800000, guid: 570783a1bc74c40d2aca396da28ede7d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_TornPosters_alpha
+    second: {fileID: 2800000, guid: d941c7d11f898489a92eb1cf949bab2e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_UtilityPole
+    second: {fileID: 2800000, guid: a58019928db0940c687b1347b543daac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_Wall
+    second: {fileID: 2800000, guid: a77469d9df7af4925a43ef055ec2fe64, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_WaterDecal
+    second: {fileID: 2800000, guid: 12914ceef619b42cfa15b3a203cb2933, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_WaterDecalBottom
+    second: {fileID: 2800000, guid: ad87404c2bd9e4593b34beb120f51906, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_WaterDecalBottom_alpha
+    second: {fileID: 2800000, guid: c9dbadafe0093448eb6753863e8f154c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_WaterDecal_alpha
+    second: {fileID: 2800000, guid: 2914049a879db4b04b97c2835853e5ee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_airco
+    second: {fileID: 2800000, guid: d356e44cb33264a61a20cdf8c56391c3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_ApartmentObjects
+    second: {fileID: 2800000, guid: 92c11c1d41fb04575b94029012a4d594, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_Boards
+    second: {fileID: 2800000, guid: a4f9d4715b30b471fa4cb84971ac9884, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_Floor
+    second: {fileID: 2800000, guid: 7d1399cb3635340d5b0f703b923413d6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_Roof
+    second: {fileID: 2800000, guid: e72e5ebc6277a417e9ab8a57234715a8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_RoofUnder
+    second: {fileID: 2800000, guid: 08eafa385348341e0a488cf6a091f08e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_SupportBeams
+    second: {fileID: 2800000, guid: 50014113a7165448f88c913639920b7a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_TopWall
+    second: {fileID: 2800000, guid: 61daec8301f1d4d9c838a45e30177e99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_Wall
+    second: {fileID: 2800000, guid: 63a4861ab30d24354b50c1abaf20d64d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_WallDecal
+    second: {fileID: 2800000, guid: a06f2d0ea75414c8e9f02ca1e93dec01, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_WallDecal_alpha
+    second: {fileID: 2800000, guid: 4d4e8d0e19176475e85c03bfe55b4322, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_WindowBars
+    second: {fileID: 2800000, guid: b86c8610eb5304d2fb4b46d639b23845, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_WindowBars_alpha
+    second: {fileID: 2800000, guid: 4528f078e20324e30a2a176bd6da3385, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_WindowsDoor
+    second: {fileID: 2800000, guid: 0be4d26ee36424005a02d0c051e3f814, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_ivy_2
+    second: {fileID: 2800000, guid: 9dfeed89d23874b17bd15cac040970be, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_ivy_2_alpha
+    second: {fileID: 2800000, guid: 266f6e20017c547478443a53568383e7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_ivy_3
+    second: {fileID: 2800000, guid: b76a52f2ffe144b4595cd8051761cd92, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_apartment_ivy_3_alpha
+    second: {fileID: 2800000, guid: 5bf88181587ad4bc2a8d0334c8998131, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_bicycle_Blue
+    second: {fileID: 2800000, guid: 7e4141c1d98b44edf96952a30de8ece5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_bicycle_Green
+    second: {fileID: 2800000, guid: 39f6f28850a4242608e9d173aa4ded16, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_bicycle_Red
+    second: {fileID: 2800000, guid: d3d751bd3e0ea419592efd752a888b2f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_bicycle_alpha
+    second: {fileID: 2800000, guid: ede8e4652c45c4970b4e0f42415d4d42, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_fence
+    second: {fileID: 2800000, guid: 02996a53f1f3c4a199ac92a43266f945, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_fence_alpha
+    second: {fileID: 2800000, guid: ebff96024f29f4536ab97ebbc59d83c2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_lamp_hanging
+    second: {fileID: 2800000, guid: 3ade45eea62a84c2bb6b1852cc41ce0d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_BottomDecal
+    second: {fileID: 2800000, guid: fb8ae8bf520c64812b5be672b3db59c6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_BottomDecal_alpha
+    second: {fileID: 2800000, guid: 8c52e38bd043d435db03c87696424e85, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_Roof2
+    second: {fileID: 2800000, guid: 4b0ed975d840e4f65a548589f0a51995, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_RoofUnder
+    second: {fileID: 2800000, guid: fd285c90b2c0c4f7596168b8eed81f9a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_SupportBeams
+    second: {fileID: 2800000, guid: 9fe6467933f96498dbfd8497513905a8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_Walls
+    second: {fileID: 2800000, guid: d4d3712990d2c4a4fa5c5148944f85f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_Wood
+    second: {fileID: 2800000, guid: 3c7478c57f34b40dcb8b509fe90b626e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_fabric
+    second: {fileID: 2800000, guid: 49d003ddbbe66419691edc13dc296c5b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_wallDecal
+    second: {fileID: 2800000, guid: 62fffd7cb0d92494fb786590e5a990b6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_windows
+    second: {fileID: 2800000, guid: 6635519c2f50b4f258071318c1061271, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_store_woodenfront
+    second: {fileID: 2800000, guid: 189d2ac204bfc408d93a0c694bdcced0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_water
+    second: {fileID: 2800000, guid: d7cb44f87d67a4acdbbe002af208176a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_water_alpha
+    second: {fileID: 2800000, guid: 650ad211f59474f8d82d97dbfeff82ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex_wood_stand
+    second: {fileID: 2800000, guid: 698b7c05f1aa641faa83997b3669e754, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
