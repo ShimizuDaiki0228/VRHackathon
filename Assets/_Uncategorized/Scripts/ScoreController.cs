@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// シングルトンパターン
@@ -9,8 +10,27 @@ public class ScoreController : MonoBehaviour
 {
     public static ScoreController Instance;
 
-    private int _score;
-    private int _highScore;
+    /// <summary>
+    /// スコア
+    /// </summary>
+    public int Score;
+
+    /// <summary>
+    /// ハイスコア
+    /// </summary>
+    public int HighScore;
+    
+    /// <summary>
+    /// スコアのUI
+    /// </summary>
+    [SerializeField]
+    private Text _scoreText;
+
+    /// <summary>
+    /// ハイスコアのUI
+    /// </summary>
+    [SerializeField]
+    private Text _highScoreText;
 
     private void Awake()
     {
@@ -25,5 +45,22 @@ public class ScoreController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        HighScore = 0;
+        Reset();
+    }
 
+    private void Reset()
+    {
+        Score = 0;
+    }
+
+    private void Update()
+    {
+        _scoreText.text = Score.ToString();
+        _highScoreText.text = HighScore.ToString();
+
+
+    }
 }
