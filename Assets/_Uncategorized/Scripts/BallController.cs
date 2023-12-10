@@ -27,6 +27,7 @@ public class BallController : MonoBehaviour
 
             if(_inPocketTime > GET_POINT_TIME)
             {
+                AudioManager.Instance.PlaySFX((int)SFX.Point);
                 Destroy(this.gameObject);
                 ScoreController.Instance.Score += collision.gameObject.GetComponent<PocketController>().PocketScoreValue;
             }
@@ -39,6 +40,23 @@ public class BallController : MonoBehaviour
         if(collision.gameObject.tag == "Pocket")
         {
             _inPocketTime = 0;
+        }
+    }
+
+    /// <summary>
+    /// ï«Ç…ìñÇΩÇ¡ÇΩÇ∆Ç´Ç∆ìBÇ…ìñÇΩÇ¡ÇΩÇ∆Ç´Ç…âπÇèoÇ∑
+    /// </summary>
+    /// <param name="collision"></param>
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Wall")
+        {
+            AudioManager.Instance.PlaySFX((int)SFX.Wall);
+        }
+
+        if(collision.gameObject.tag == "Nail")
+        {
+            AudioManager.Instance.PlaySFX((int)SFX.Nail);
         }
     }
 }
