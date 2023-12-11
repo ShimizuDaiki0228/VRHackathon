@@ -19,7 +19,7 @@ public class BallController : MonoBehaviour
     /// ポケットオブジェクトにPocketControllerをアタッチしてインスペクター上からそのポケットで何点入るようにするか設定
     /// </summary>
     /// <param name="collision"></param>
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider collision)
     {
         if(collision.gameObject.tag == "Pocket")
         {
@@ -35,7 +35,7 @@ public class BallController : MonoBehaviour
     }
 
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collision)
     {
         if(collision.gameObject.tag == "Pocket")
         {
