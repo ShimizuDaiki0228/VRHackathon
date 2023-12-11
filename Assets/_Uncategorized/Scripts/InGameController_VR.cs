@@ -55,17 +55,21 @@ public class InGameController_VR : MonoBehaviour
 #else
         float triggerStrength = OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
 
+        //トリガーでボールを発射する
+        //if (triggerStrength >= 0.1f & _pushCubeOffsetY > -2)
         //トリガーではなくAボタンでボールを発射する
         if (OVRInput.Get(OVRInput.Button.One) & _pushCubeOffsetY > -2)
         {
             _pushCubeOffsetY -= 0.01f;
             currentPushCubePosition.y -= 0.01f;
 
-            OVRInput.SetControllerVibration(0.7f, _pushCubeOffsetY*0.5f, controllerType);
+            OVRInput.SetControllerVibration(0.7f, _pushCubeOffsetY* -0.5f, controllerType);
 
             _pushPower += 0.5f;
         }
 
+
+        //if (triggerStrength < 0.1f)
         if (OVRInput.GetUp(OVRInput.Button.One))
         {
             if (!IsPush)
