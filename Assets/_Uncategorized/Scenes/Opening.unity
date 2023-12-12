@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4297055, g: 0.3614543, b: 0.4329533, a: 1}
+  m_IndirectSpecularColor: {r: 0.43048742, g: 0.3647512, b: 0.4342095, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6954,7 +6954,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 694274128}
-  - component: {fileID: 694274127}
   m_Layer: 0
   m_Name: SkyboxRotater
   m_TagString: Untagged
@@ -6962,20 +6961,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &694274127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694274126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99d95b7e757444694b70886edca8fae4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skyboxMaterial: {fileID: 2100000, guid: 1419fa9ef35dc469eb7a3cb92cd47940, type: 2}
-  rotationSpeed: 0.1
 --- !u!4 &694274128
 Transform:
   m_ObjectHideFlags: 0
