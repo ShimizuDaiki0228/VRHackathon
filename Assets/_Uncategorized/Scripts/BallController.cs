@@ -30,6 +30,11 @@ public class BallController : MonoBehaviour
                 AudioManager.Instance.PlaySFX((int)SFX.Point);
                 Destroy(this.gameObject);
                 ScoreController.Instance.Score += collision.gameObject.GetComponent<PocketController>().PocketScoreValue;
+                
+                if(collision.gameObject.GetComponent<PocketController>().IsLuckyPocket)
+                {
+                    InGameController_VR.Instance.AddBall();
+                }
             }
         }
     }

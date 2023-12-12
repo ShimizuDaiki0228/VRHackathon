@@ -13,6 +13,8 @@ public class PocketController : MonoBehaviour
     /// </summary>
     public int PocketScoreValue = 0;
 
+    public bool IsLuckyPocket = false;
+
     // Start is called before the first frame update
     void Start()
     {
