@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class InGameController_VR : MonoBehaviour
 {
@@ -22,9 +24,13 @@ public class InGameController_VR : MonoBehaviour
     /// <summary>
     /// pushCubeの上に載っているballを格納したリスト
     /// </summary>
-    public List<GameObject> BallList = new List<GameObject>();
+    public List<GameObject> ReadyBallList = new List<GameObject>();
+
+    public List<GameObject> ExistBallList = new List<GameObject>();
 
     private Vector3 _addBallPosition = new Vector3(-13.5f, -16, 31.78f);
+
+    private bool _isPlaying = true;
 
     private void Awake()
     {
@@ -41,7 +47,10 @@ public class InGameController_VR : MonoBehaviour
 
     void Start()
     {
+        _isPlaying = true;
+
         _ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
+        ExistBallList.Add(_ball);
         _ballRigidbody = _ball.GetComponent<Rigidbody>();
         _pushCubeCachedTransform = _pushCube.transform;
     }
@@ -49,8 +58,19 @@ public class InGameController_VR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-            AddBall();
+        if (!_isPlaying)
+            return;
+
+        if (ExistBallList.Count <= 0 && _isPlaying)
+        {
+            _isPlaying = false;
+            StartCoroutine(LoadResultScene());
+            return;
+        }
+
+
+        //if (Input.GetKeyDown(KeyCode.LeftShift))
+        //    AddBall();
 
 
         Vector3 currentPushCubePosition = _pushCube.transform.position;
@@ -68,12 +88,12 @@ public class InGameController_VR : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            foreach(var ball in BallList)
+            foreach(var ball in ReadyBallList)
             {
                 Rigidbody rb = ball.GetComponent<Rigidbody>();
                 rb.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
             }
-            BallList.Clear();
+            ReadyBallList.Clear();
 
             StartCoroutine(PushCubeReturn());
             _pushPower = 0;
@@ -177,6 +197,13 @@ public class InGameController_VR : MonoBehaviour
         }
     }
 
+    IEnumerator LoadResultScene()
+    {
+        yield return new WaitForSeconds(1);
+        //現状2が終了画面だったため
+        SceneManager.LoadScene(2);
+    }
+
     public void AddBall()
     {
         Vector3 addBallPositionOffset = new Vector3(0, 0, 0);
@@ -184,6 +211,7 @@ public class InGameController_VR : MonoBehaviour
         for(int i = 0; i < 10; i++)
         {
             _ball = Instantiate(_ballPrefab, _addBallPosition + addBallPositionOffset, Quaternion.identity);
+            ExistBallList.Add(_ball);
             addBallPositionOffset += new Vector3(2, 0, 0);
         }
     }

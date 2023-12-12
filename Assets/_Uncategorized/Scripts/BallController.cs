@@ -35,6 +35,10 @@ public class BallController : MonoBehaviour
                 {
                     InGameController_VR.Instance.AddBall();
                 }
+
+
+                InGameController_VR.Instance.ExistBallList.Remove(this.gameObject);
+
             }
         }
     }
