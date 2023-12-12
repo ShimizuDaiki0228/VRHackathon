@@ -14,7 +14,6 @@ public class InGameController_VR : MonoBehaviour
     private Transform _pushCubeCachedTransform;
     private float _pushCubeOffsetY = 0;
     private float _pushPower = 0;
-    public bool IsPush;
 
     [SerializeField] OVRInput.Controller controllerType;
 
@@ -79,11 +78,12 @@ public class InGameController_VR : MonoBehaviour
         //if (triggerStrength < 0.1f)
         if (OVRInput.GetUp(OVRInput.Button.One))
         {
-            if (!IsPush)
+            foreach(var ball in BallList)
             {
-                IsPush = true;
-                _ballRigidbody.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
+                Rigidbody rb = ball.GetComponent<Rigidbody>();
+                rb.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
             }
+            BallList.Clear();
 
             StartCoroutine(PushCubeReturn());
 
@@ -109,11 +109,12 @@ public class InGameController_VR : MonoBehaviour
         ////コントローラのトリガーを離した時
         //if (triggerStrength == 0 & _pushPower > 0)
         //{
-        //    if (!IsPush)
-        //    {
-        //        IsPush = true;
-        //        _ballRigidbody.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
-        //    }
+        //    foreach(var ball in BallList)
+            //{
+            //    Rigidbody rb = ball.GetComponent<Rigidbody>();
+            //    rb.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
+            //}
+            //BallList.Clear();
 
         //    StartCoroutine(PushCubeReturn_VR());
 
