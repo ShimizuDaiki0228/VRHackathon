@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InGameController_VR : MonoBehaviour
@@ -16,6 +17,11 @@ public class InGameController_VR : MonoBehaviour
     public bool IsPush;
 
     [SerializeField] OVRInput.Controller controllerType;
+
+    /// <summary>
+    /// pushCubeの上に載っているballを格納したリスト
+    /// </summary>
+    public List<GameObject> BallList = new List<GameObject>();
 
     void Awake()
     {
@@ -42,11 +48,12 @@ public class InGameController_VR : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            if (!IsPush)
+            foreach(var ball in BallList)
             {
-                IsPush = true;
-                _ballRigidbody.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
+                Rigidbody rb = ball.GetComponent<Rigidbody>();
+                rb.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
             }
+            BallList.Clear();
 
             StartCoroutine(PushCubeReturn());
             _pushPower = 0;
@@ -147,4 +154,6 @@ public class InGameController_VR : MonoBehaviour
             yield return null;
         }
     }
+
+    
 }
