@@ -26,7 +26,20 @@ public class InGameController_VR : MonoBehaviour
 
     private Vector3 _addBallPosition = new Vector3(-13.5f, -16, 31.78f);
 
-    void Awake()
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void Start()
     {
         _ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
         _ballRigidbody = _ball.GetComponent<Rigidbody>();
@@ -36,8 +49,8 @@ public class InGameController_VR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.LeftShift))
-        //    AddBall();
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            AddBall();
 
 
         Vector3 currentPushCubePosition = _pushCube.transform.position;
