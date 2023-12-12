@@ -15,4 +15,10 @@ public class PushCubeController_VR : MonoBehaviour
             inGameController_VR.IsPush = false;
         }
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (!inGameController_VR.BallList.Contains(collision.gameObject))
+            inGameController_VR.BallList.Add(collision.gameObject);
+    }
 }
