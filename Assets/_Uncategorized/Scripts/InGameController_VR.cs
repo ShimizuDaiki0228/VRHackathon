@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class InGameController_VR : MonoBehaviour
 {
+    public static InGameController_VR Instance;
+
     [SerializeField] private GameObject _ballPrefab;
     [HideInInspector] public GameObject _ball;
     private Rigidbody _ballRigidbody;
@@ -22,6 +24,8 @@ public class InGameController_VR : MonoBehaviour
     /// </summary>
     public List<GameObject> BallList = new List<GameObject>();
 
+    private Vector3 _addBallPosition = new Vector3(-13.5f, -16, 31.78f);
+
     void Awake()
     {
         _ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
@@ -32,6 +36,10 @@ public class InGameController_VR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (Input.GetKeyDown(KeyCode.LeftShift))
+        //    AddBall();
+
+
         Vector3 currentPushCubePosition = _pushCube.transform.position;
 
 #if UNITY_EDITOR
@@ -156,5 +164,15 @@ public class InGameController_VR : MonoBehaviour
         }
     }
 
+    public void AddBall()
+    {
+        Vector3 addBallPositionOffset = new Vector3(0, 0, 0);
+
+        for(int i = 0; i < 10; i++)
+        {
+            _ball = Instantiate(_ballPrefab, _addBallPosition + addBallPositionOffset, Quaternion.identity);
+            addBallPositionOffset += new Vector3(2, 0, 0);
+        }
+    }
     
 }
