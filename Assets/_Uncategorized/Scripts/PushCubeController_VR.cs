@@ -9,7 +9,7 @@ public class PushCubeController_VR : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (!inGameController_VR.BallList.Contains(collision.gameObject))
-            inGameController_VR.BallList.Add(collision.gameObject);
+        if (!inGameController_VR.ReadyBallList.Contains(collision.gameObject))
+            inGameController_VR.ReadyBallList.Add(collision.gameObject);
     }
 }
