@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
@@ -60,7 +61,23 @@ public class ScoreController : MonoBehaviour
     {
         _scoreText.text = Score.ToString();
         _highScoreText.text = HighScore.ToString();
+    }
 
+    // シーンがロードされたときに呼び出されるメソッドを追加
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // 新しいシーンで必要なUI要素を探す
+        _scoreText = GameObject.Find("Score").GetComponent<Text>();
+        _highScoreText = GameObject.Find("HighScore").GetComponent<Text>();
+    }
 
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
