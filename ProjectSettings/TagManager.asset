@@ -9,6 +9,7 @@ TagManager:
   - Metal
   - Wall
   - Nail
+  - DestroyBall
   layers:
   - Default
   - TransparentFX

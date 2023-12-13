@@ -11,11 +11,9 @@ public class InGameController_VR : MonoBehaviour
 
     [SerializeField] private GameObject _ballPrefab;
     [HideInInspector] public GameObject _ball;
-    private Rigidbody _ballRigidbody;
 
 
     [SerializeField] private GameObject _pushCube;
-    private Transform _pushCubeCachedTransform;
     private float _pushCubeOffsetY = 0;
     private float _pushPower = 0;
 
@@ -49,10 +47,8 @@ public class InGameController_VR : MonoBehaviour
     {
         _isPlaying = true;
 
-        _ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
-        ExistBallList.Add(_ball);
-        _ballRigidbody = _ball.GetComponent<Rigidbody>();
-        _pushCubeCachedTransform = _pushCube.transform;
+        //_ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
+        //ExistBallList.Add(_ball);
     }
 
     // Update is called once per frame
