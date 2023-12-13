@@ -28,7 +28,7 @@ public class InGameController_VR : MonoBehaviour
 
     public List<GameObject> ExistBallList = new List<GameObject>();
 
-    private Vector3 _addBallPosition = new Vector3(-13.5f, -16, 31.78f);
+    private Vector3 _addBallPosition = new Vector3(-11.5f, -16, 31.78f);
 
     private bool _isPlaying = true;
 
@@ -49,10 +49,11 @@ public class InGameController_VR : MonoBehaviour
     {
         _isPlaying = true;
 
-        _ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
-        ExistBallList.Add(_ball);
-        _ballRigidbody = _ball.GetComponent<Rigidbody>();
+        //_ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
+        //ExistBallList.Add(_ball);
+        //_ballRigidbody = _ball.GetComponent<Rigidbody>();
         _pushCubeCachedTransform = _pushCube.transform;
+        AddBall();
     }
 
     // Update is called once per frame
@@ -119,12 +120,12 @@ public class InGameController_VR : MonoBehaviour
         //if (triggerStrength < 0.1f)
         if (OVRInput.GetUp(OVRInput.Button.One))
         {
-            foreach(var ball in BallList)
+            foreach(var ball in ReadyBallList)
             {
                 Rigidbody rb = ball.GetComponent<Rigidbody>();
                 rb.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
             }
-            BallList.Clear();
+            ReadyBallList.Clear();
 
             StartCoroutine(PushCubeReturn());
 
