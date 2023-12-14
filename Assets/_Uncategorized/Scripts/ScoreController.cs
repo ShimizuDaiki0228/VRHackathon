@@ -14,12 +14,12 @@ public class ScoreController : MonoBehaviour
     /// <summary>
     /// スコア
     /// </summary>
-    public int Score;
+    public int Score = 0;
 
     /// <summary>
     /// ハイスコア
     /// </summary>
-    public int HighScore;
+    public int HighScore = 0;
     
     /// <summary>
     /// スコアのUI
