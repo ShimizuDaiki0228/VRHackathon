@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class RotateAndReverse : MonoBehaviour
 {
+    [SerializeField] AudioSource audio;
 
     private void Update()
     {
@@ -14,6 +15,7 @@ public class RotateAndReverse : MonoBehaviour
     public void RotateAndReturn()
     {
         // コルーチンを開始
+        audio.Play();
         StartCoroutine(RotateCoroutine());
     }
 
