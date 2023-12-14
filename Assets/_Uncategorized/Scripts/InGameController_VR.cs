@@ -30,27 +30,34 @@ public class InGameController_VR : MonoBehaviour
 
     private bool _isPlaying = true;
 
-    private void Awake()
+    [SerializeField] AudioSource audio;
+
+    //private void Awake()
+    //{
+    //    if (Instance == null)
+    //    {
+    //        Instance = this;
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //    else
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
+
+    void Start()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-    }
 
-    void Start()
-    {
         _isPlaying = true;
 
-        //_ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
-        //ExistBallList.Add(_ball);
-        //_ballRigidbody = _ball.GetComponent<Rigidbody>();
-        _pushCubeCachedTransform = _pushCube.transform;
         AddBall();
     }
 
@@ -87,10 +94,18 @@ public class InGameController_VR : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
+            audio.Play();
             foreach(var ball in ReadyBallList)
             {
-                Rigidbody rb = ball.GetComponent<Rigidbody>();
-                rb.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
+                try
+                {
+                    Rigidbody rb = ball.GetComponent<Rigidbody>();
+                    rb.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
+                }
+                catch (MissingReferenceException e)
+                {
+                    Debug.LogError($"Error: {e.Message}");
+                }
             }
             ReadyBallList.Clear();
 
@@ -118,18 +133,32 @@ public class InGameController_VR : MonoBehaviour
         //if (triggerStrength < 0.1f)
         if (OVRInput.GetUp(OVRInput.Button.One))
         {
+            audio.Play();
             foreach(var ball in ReadyBallList)
             {
-                Rigidbody rb = ball.GetComponent<Rigidbody>();
-                rb.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
+                try
+                {
+                    Rigidbody rb = ball.GetComponent<Rigidbody>();
+                    rb.AddForce(Vector3.up * _pushPower, ForceMode.Impulse);
+                }
+                catch (MissingReferenceException e)
+                {
+                    //Debug.LogError($"Error: {e.Message}");
+                }finally
+                {
+                    ReadyBallList.Clear();
+                    StartCoroutine(PushCubeReturn());
+                    OVRInput.SetControllerVibration(0, 0, controllerType);
+                    _pushPower = 0;
+                }
             }
-            ReadyBallList.Clear();
+            //ReadyBallList.Clear();
 
-            StartCoroutine(PushCubeReturn());
+            //StartCoroutine(PushCubeReturn());
 
-            OVRInput.SetControllerVibration(0, 0, controllerType);
+            //OVRInput.SetControllerVibration(0, 0, controllerType);
 
-            _pushPower = 0;
+            //_pushPower = 0;
         }
 
         //下記はペンディング。トリガーがアナログ入力であるため0と1の値を正確に取得しない場合がある模様
