@@ -56,9 +56,6 @@ public class InGameController_VR : MonoBehaviour
             Destroy(gameObject);
         }
 
-
-    void Start()
-    {
         _isPlaying = true;
 
         AddBall();
