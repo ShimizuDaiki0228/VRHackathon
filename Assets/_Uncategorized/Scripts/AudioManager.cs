@@ -9,6 +9,7 @@ public enum SFX
     Point,
     Wall,
     Nail,
+    DestroyWithoutPoint,
 }
 
 public enum BGM
@@ -43,7 +44,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// SFX‚ð–Â‚ç‚·
+    /// SFXï¿½ï¿½Â‚ç‚·
     /// </summary>
     /// <param name="sfxIndex"></param>
     public void PlaySFX(int sfxIndex)
@@ -51,13 +52,13 @@ public class AudioManager : MonoBehaviour
         if (sfxIndex < _sfx.Length)
         {
             StopSFX();
-            _sfx[sfxIndex].Play();
+            _sfx[sfxIndex].PlayOneShot(_sfx[sfxIndex].clip);
             _currentSFXIndex = sfxIndex;
         }
     }
 
     /// <summary>
-    /// SFX‚ðŽ~‚ß‚é
+    /// SFXï¿½ï¿½ï¿½~ï¿½ß‚ï¿½
     /// </summary>
     public void StopSFX()
     {
@@ -65,7 +66,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// BGM‚ð—¬‚·
+    /// BGMï¿½ð—¬‚ï¿½
     /// </summary>
     /// <param name="bgmIndex"></param>
     public void PlayBGM(int bgmIndex)
@@ -79,7 +80,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// BGM‚ð‚·‚®‚ÉŽ~‚ß‚é
+    /// BGMï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉŽ~ï¿½ß‚ï¿½
     /// </summary>
     public void StopBGM()
     {

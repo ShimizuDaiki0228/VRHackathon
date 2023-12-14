@@ -6,7 +6,7 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     /// <summary>
-    /// ƒ|ƒPƒbƒg‚É“ü‚Á‚Ä“_‚ª“ü‚é‚Ü‚Å‚ÌŠÔ
+    /// ï¿½|ï¿½Pï¿½bï¿½gï¿½É“ï¿½ï¿½ï¿½ï¿½Ä“_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Å‚Ìï¿½ï¿½ï¿½
     /// </summary>
     private const int GET_POINT_TIME = 2;
 
@@ -14,9 +14,9 @@ public class BallController : MonoBehaviour
 
 
     /// <summary>
-    /// ƒ|ƒPƒbƒg‚É“ü‚Á‚½‚Ìˆ—
-    /// ƒ|ƒPƒbƒgƒIƒuƒWƒFƒNƒg‚Ìƒ^ƒO‚ğ"Pocket"‚É‚µ‚Ä‚­‚¾‚³‚¢BiV‚µ‚­ì¬‚µ‚Äj
-    /// ƒ|ƒPƒbƒgƒIƒuƒWƒFƒNƒg‚ÉPocketController‚ğƒAƒ^ƒbƒ`‚µ‚ÄƒCƒ“ƒXƒyƒNƒ^[ã‚©‚ç‚»‚Ìƒ|ƒPƒbƒg‚Å‰½“_“ü‚é‚æ‚¤‚É‚·‚é‚©İ’è
+    /// ï¿½|ï¿½Pï¿½bï¿½gï¿½É“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½
+    /// ï¿½|ï¿½Pï¿½bï¿½gï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½Ìƒ^ï¿½Oï¿½ï¿½"Pocket"ï¿½É‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Bï¿½iï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ì¬ï¿½ï¿½ï¿½Äj
+    /// ï¿½|ï¿½Pï¿½bï¿½gï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½PocketControllerï¿½ï¿½ï¿½Aï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ÄƒCï¿½ï¿½ï¿½Xï¿½yï¿½Nï¿½^ï¿½[ï¿½ã‚©ï¿½ç‚»ï¿½Ìƒ|ï¿½Pï¿½bï¿½gï¿½Å‰ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½é‚©ï¿½İ’ï¿½
     /// </summary>
     /// <param name="collision"></param>
     private void OnTriggerStay(Collider collision)
@@ -53,7 +53,7 @@ public class BallController : MonoBehaviour
     }
 
     /// <summary>
-    /// •Ç‚É“–‚½‚Á‚½‚Æ‚«‚Æ“B‚É“–‚½‚Á‚½‚Æ‚«‚É‰¹‚ğo‚·
+    /// ï¿½Ç‚É“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Æ“Bï¿½É“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½É‰ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½
     /// </summary>
     /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
@@ -70,6 +70,7 @@ public class BallController : MonoBehaviour
 
         if(collision.gameObject.tag == "DestroyBall")
         {
+            AudioManager.Instance.PlaySFX((int)SFX.DestroyWithoutPoint);
             Destroy(this.gameObject);
             InGameController_VR.Instance.ExistBallList.Remove(this.gameObject);
         }
