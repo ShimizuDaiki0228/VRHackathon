@@ -7659,7 +7659,7 @@ GameObject:
   - component: {fileID: 286252132}
   - component: {fileID: 286252131}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Score_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8042,7 +8042,7 @@ GameObject:
   - component: {fileID: 347348254}
   - component: {fileID: 347348253}
   m_Layer: 5
-  m_Name: Score_int
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9601,7 +9601,7 @@ MonoBehaviour:
   controllerType: 2
   ReadyBallList: []
   ExistBallList: []
-  audio: {fileID: 610734985}
+  audio: {fileID: 0}
 --- !u!82 &610734985
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12955,7 +12955,7 @@ GameObject:
   - component: {fileID: 656297052}
   - component: {fileID: 656297051}
   m_Layer: 5
-  m_Name: HighScore
+  m_Name: HighScore_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15010,7 +15010,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh762632
+  m_Name: pb_Mesh850134
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -16905,7 +16905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ca36ae5dfe84e0994496d87e02292c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 1032169492}
+  audio: {fileID: 0}
 --- !u!82 &1032169492
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18199,7 +18199,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh770000
+  m_Name: pb_Mesh850956
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -27591,7 +27591,7 @@ GameObject:
   - component: {fileID: 1999455351}
   - component: {fileID: 1999455350}
   m_Layer: 5
-  m_Name: HighScore_int
+  m_Name: HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

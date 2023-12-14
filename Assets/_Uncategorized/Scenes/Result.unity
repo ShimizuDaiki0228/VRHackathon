@@ -1816,7 +1816,7 @@ GameObject:
   - component: {fileID: 174949062}
   - component: {fileID: 174949061}
   m_Layer: 5
-  m_Name: ResultScore
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1897,7 +1897,7 @@ GameObject:
   - component: {fileID: 225759870}
   - component: {fileID: 225759869}
   m_Layer: 5
-  m_Name: ResultHighScore
+  m_Name: HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
