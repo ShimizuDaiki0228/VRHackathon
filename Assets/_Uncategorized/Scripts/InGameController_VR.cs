@@ -11,11 +11,9 @@ public class InGameController_VR : MonoBehaviour
 
     [SerializeField] private GameObject _ballPrefab;
     [HideInInspector] public GameObject _ball;
-    private Rigidbody _ballRigidbody;
 
 
     [SerializeField] private GameObject _pushCube;
-    private Transform _pushCubeCachedTransform;
     private float _pushCubeOffsetY = 0;
     private float _pushPower = 0;
 

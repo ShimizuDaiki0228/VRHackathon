@@ -67,5 +67,11 @@ public class BallController : MonoBehaviour
         {
             AudioManager.Instance.PlaySFX((int)SFX.Nail);
         }
+
+        if(collision.gameObject.tag == "DestroyBall")
+        {
+            Destroy(this.gameObject);
+            InGameController_VR.Instance.ExistBallList.Remove(this.gameObject);
+        }
     }
 }
