@@ -43,13 +43,10 @@ public class InGameController_VR : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        _isPlaying = true;
-
-        //_ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
-        //ExistBallList.Add(_ball);
-    }
+    //void Start()
+    //{
+    //    _isPlaying = true;
+    //}
 
     // Update is called once per frame
     void Update()
@@ -211,5 +208,26 @@ public class InGameController_VR : MonoBehaviour
             addBallPositionOffset += new Vector3(2, 0, 0);
         }
     }
-    
+
+    // シーンがロードされたときに呼び出されるメソッドを追加
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        _isPlaying = true;
+
+        _ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
+        ExistBallList.Add(_ball);
+
+        _pushCube = GameObject.Find("PushCube");
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
 }
