@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class RotateAndReverse : MonoBehaviour
 {
+    [SerializeField] AudioSource audio;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A)) {
+        if (Input.GetKeyDown(KeyCode.A) || OVRInput.GetDown(OVRInput.Button.Two)) {
             RotateAndReturn();
         }
     }
@@ -14,6 +15,7 @@ public class RotateAndReverse : MonoBehaviour
     public void RotateAndReturn()
     {
         // コルーチンを開始
+        audio.Play();
         StartCoroutine(RotateCoroutine());
     }
 
