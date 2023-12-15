@@ -35,6 +35,9 @@ public class BallController : MonoBehaviour
                 Destroy(this.gameObject);
                 ScoreController.Instance.Score += collision.gameObject.GetComponent<PocketController>().PocketScoreValue;
                 
+                if(ScoreController.Instance.Score > ScoreController.Instance.HighScore)
+                    ScoreController.Instance.HighScore = ScoreController.Instance.Score;
+                
                 if(collision.gameObject.GetComponent<PocketController>().IsLuckyPocket)
                 {
                     InGameController_VR.Instance.AddBall();
