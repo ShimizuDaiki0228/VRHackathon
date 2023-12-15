@@ -22,7 +22,7 @@ public class RotateAndReverse : MonoBehaviour
     private IEnumerator RotateCoroutine()
     {
         // 回転の速さや角度は必要に応じて調整
-        float rotationSpeed = 20f; // 1秒間に180度回転
+        float rotationSpeed = 40f; // 1秒間に180度回転
         float maxRotation = 105f;   // 最大回転角度
         float returnRotation = 90f; // 戻る角度
 

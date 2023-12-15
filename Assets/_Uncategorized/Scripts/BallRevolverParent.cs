@@ -29,7 +29,7 @@ public class BallRevolverParent : MonoBehaviour
         float time = 0;
 
         // 大きく回転
-        while (time < 5f)
+        while (time < 2.5f)
         {
             time += Time.deltaTime;
             transform.Translate(0f, 0.05f * Mathf.Sin(360*(time/5f)),0f);
