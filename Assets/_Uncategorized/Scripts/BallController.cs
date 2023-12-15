@@ -12,6 +12,7 @@ public class BallController : MonoBehaviour
 
     private float _inPocketTime = 0;
 
+    [SerializeField] ParticleSystem effect;
 
     /// <summary>
     /// �|�P�b�g�ɓ��������̏���
@@ -28,14 +29,17 @@ public class BallController : MonoBehaviour
             if(_inPocketTime > GET_POINT_TIME)
             {
                 AudioManager.Instance.PlaySFX((int)SFX.Point);
+                Instantiate(effect, this.gameObject.transform.position, Quaternion.identity);
+                effect.Play();
+                StartCoroutine(DestroyPrefabAfterDelay(effect.gameObject, 3f));
                 Destroy(this.gameObject);
                 ScoreController.Instance.Score += collision.gameObject.GetComponent<PocketController>().PocketScoreValue;
                 
                 if(collision.gameObject.GetComponent<PocketController>().IsLuckyPocket)
                 {
                     InGameController_VR.Instance.AddBall();
+                    AudioManager.Instance.PlaySFX((int)SFX.LuckyPocket);
                 }
-
 
                 InGameController_VR.Instance.ExistBallList.Remove(this.gameObject);
 
@@ -71,8 +75,20 @@ public class BallController : MonoBehaviour
         if(collision.gameObject.tag == "DestroyBall")
         {
             AudioManager.Instance.PlaySFX((int)SFX.DestroyWithoutPoint);
+            Instantiate(effect, this.gameObject.transform.position, Quaternion.identity);
+            effect.Play();
+            StartCoroutine(DestroyPrefabAfterDelay(effect.gameObject, 3f));
             Destroy(this.gameObject);
             InGameController_VR.Instance.ExistBallList.Remove(this.gameObject);
         }
+    }
+
+    private IEnumerator DestroyPrefabAfterDelay(GameObject prefabInstance, float delay)
+    {
+        // delay秒待機
+        yield return new WaitForSeconds(delay);
+
+        // Prefabを破棄
+        Destroy(prefabInstance);
     }
 }

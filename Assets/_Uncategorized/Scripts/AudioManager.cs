@@ -10,6 +10,7 @@ public enum SFX
     Wall,
     Nail,
     DestroyWithoutPoint,
+    LuckyPocket,
 }
 
 public enum BGM

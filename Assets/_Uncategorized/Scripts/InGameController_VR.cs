@@ -86,15 +86,15 @@ public class InGameController_VR : MonoBehaviour
         //スペースキーを押した時（デバッグ用）
         if (Input.GetKey(KeyCode.Space) & _pushCubeOffsetY > -2)
         {
-            _pushCubeOffsetY -= 0.01f;
-            currentPushCubePosition.y -= 0.01f;
+            _pushCubeOffsetY -= 0.02f;
+            currentPushCubePosition.y -= 0.02f;
 
-            _pushPower += 0.5f;
+            _pushPower += 1.0f;
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            audio.Play();
+            audio.PlayOneShot(audio.clip);
             foreach(var ball in ReadyBallList)
             {
                 try
@@ -121,19 +121,19 @@ public class InGameController_VR : MonoBehaviour
         //トリガーではなくAボタンでボールを発射する
         if (OVRInput.Get(OVRInput.Button.One) & _pushCubeOffsetY > -2)
         {
-            _pushCubeOffsetY -= 0.01f;
-            currentPushCubePosition.y -= 0.01f;
+            _pushCubeOffsetY -= 0.02f;
+            currentPushCubePosition.y -= 0.02f;
 
             OVRInput.SetControllerVibration(0.7f, _pushCubeOffsetY* -0.5f, controllerType);
 
-            _pushPower += 0.5f;
+            _pushPower += 1.0f;
         }
 
 
         //if (triggerStrength < 0.1f)
         if (OVRInput.GetUp(OVRInput.Button.One))
         {
-            audio.Play();
+            audio.PlayOneShot(audio.clip);
             foreach(var ball in ReadyBallList)
             {
                 try
@@ -249,8 +249,8 @@ public class InGameController_VR : MonoBehaviour
     {
         _isPlaying = true;
 
-        _ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
-        ExistBallList.Add(_ball);
+        //_ball = Instantiate(_ballPrefab, _ballPrefab.transform.position, Quaternion.identity);
+        //ExistBallList.Add(_ball);
 
         _pushCube = GameObject.Find("PushCube");
     }
