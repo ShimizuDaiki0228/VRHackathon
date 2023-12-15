@@ -218,6 +218,8 @@ public class InGameController_VR : MonoBehaviour
         ExistBallList.Add(_ball);
 
         _pushCube = GameObject.Find("PushCube");
+
+        ScoreController.Instance.Score = 0;
     }
 
     void OnEnable()
